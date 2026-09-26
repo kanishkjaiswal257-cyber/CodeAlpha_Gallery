@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #70dec8;
+}
+
+.gallery {
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.main-image img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttons {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.images img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  width: 70%;
+  max-width: 700px;
+}
+
+.lightbox button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .main-image img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .images img {
+    width: 100px;
+    height: 70px;
+  }
+}
